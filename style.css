@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+body {
+    background-color: rgba(121, 121, 121, 0.61);
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.container {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.map {
+    height: 100vh;
+    width: 100%;
+
+}
+
+.container * {
+    position: absolute;
+}
+
+.arrow {
+    width: 80px;
+}
+
+.arrow1, .arrow2 {
+    top: 45%;
+    left: 45%;
+    transform: rotate(-45deg);
+}
+
+.arrow2 {
+    left: 27%;
+    transform: rotate(225deg);
+}
+
+.arrow3 {
+    left: 38%;
+    top: 67%;
+    transform: rotate(90deg);
+}
+
+.none {
+    display: none;
+}
+
+.mainTarget {
+    transition: background-color 0.2s linear;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-size: 24px;
+    width: 300px;
+    height: 60px;
+    background-color: rgb(87, 87, 87);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.info {
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.info img {
+    width: 45%;
+    height: 55%;
+}
+
+.nextInfo, .there {
+    font-size: 20px;
+    width: 250px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(163, 144, 119, 0.801);
+    color: rgba(200, 180, 159, 1);
+}
+
+.nextInfo {
+    cursor: pointer;
+}
+
+.there {
+    background-color: rgba(168, 118, 89, 0.897);
+    color: rgb(83, 65, 57);
+}
+
+.mainTarget:hover {
+    background-color: rgb(49, 49, 49);
+}
+
+@media (max-width: 1296px) {
+    .container {
+        width: 100%;
+    }
+
+    .arrow1 {
+        left: 44%;
+    }
+
+    .arrow3 {
+        transform: translateX(-25%) rotate(90deg);
+    }
+}
+
+.containerMain, .generator, .handmade, .back, .next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerMain {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.main {
+    user-select: none;
+    height: 600px;
+    min-width: 450px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main p {
+    font-weight: bolder;
+    font-size: 24px;
+    color: rgba(53, 65, 57, 0.877);
+}
+
+.functional {
+    width: 100%;
+    height: 80%;
+    justify-content: center;
+    text-align: center;
+}
+
+.directions {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.generator, .handmade, .next {
+    font-size: 22px;
+    color: rgb(36, 27, 26);
+    width: 100%;
+    background-color: rgb(143, 106, 101);
+    height: 60px;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.handmade:hover {
+    background-color: rgb(118, 81, 76);
+    color: rgb(0, 0, 0);
+}
+
+.generator {
+    margin: 20px 0;
+    background-color: rgb(160, 223, 199);
+    color: rgb(70, 95, 86);
+}
+
+.generator:hover {
+    background-color: rgb(120, 183, 159);
+    color: rgb(30, 55, 46);
+}
+
+.directions * {
+    display: none;
+}
+
+.back {
+    width: 50%;
+    height: 40px;
+    border: 1px solid black;
+    margin-bottom: 20px;
+    transition: 0.5s ease-in;
+}
+
+.back:hover {
+    background-color: black;
+    opacity: 0.61;
+    color: rgb(121, 121, 121);
+}
+
+.active *, .next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(240, 255, 255, 0.5);
+    font-size: 20px;
+    width: 30%;
+    height: 40px;
+    font-size: 15px;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.active *:hover, .next:hover {
+    background-color: rgba(200, 215, 215, 0.5);
+}
+
+.next {
+    opacity: 0.9;
+    margin-top: 15px;
+    transition: 0.5s;
+    height: 60px;
+    width: 100%;
+}
+
+.btn {
+    cursor: pointer;
+}
