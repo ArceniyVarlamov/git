@@ -139,12 +139,10 @@ function nextGameMode(direct: number[], dir: number) {
             // Сервер https://smth/smth/smth/ с експонатом под номером there
             `https://smth/smth/smth/${there}`
         );
-        // Контент с картинкой-кодом с кнопками и т.
-
-        let infoContent = `<div class="info"><div class="there">Точка N${there}</div><a-assets><a-asset-item id="target-file" src="${info.imgUrl}"/></a-assets><a-entity zappar-image="#target-file"><a-entity src="${ent}/${there}"></a-entity></a-entity><div class="nextInfo">Следующий экспонат</div></div>`;
+        // Контент с картинкой-кодом с кнопками и объектом внутри.
+        let infoContent = `<div class="info"><div class="there">Точка N${there}</div><a-assets><a-asset-item id="target-file" src="${info.imgUrl}"/></a-assets><a-entity zappar-image="#target-file"><a-entity src="ent/${there}"></a-entity></a-entity><div class="nextInfo">Следующий экспонат</div></div>`;
         document.body.insertAdjacentHTML("beforeend", infoContent);
         let nextInfo = document.querySelector<HTMLElement>(".nextInfo");
-
         i++;
         nextInfo?.addEventListener("click", (e) => {
             document.body.removeEventListener("click", remove);
